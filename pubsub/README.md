@@ -4,8 +4,9 @@ For creating a new msg definition, we use primitive data types. Consult http://w
 
 1. Create a package only for messages and service definitions, with `$ catkin_create_pkg my_robot_msgs roscpp rospy std_msgs`
 2. Remove "include" folder with `$ rm -rf include/`
-3. Remove "src" folder with `$ rm -rf src/
+3. Remove "src" folder with `$ rm -rf src/`
 We only need `CMakeLists.txt` and `package.xml`
+
 4. Add in `package.xml`:
 `<build_depend>message_generation</build_depend>`
 

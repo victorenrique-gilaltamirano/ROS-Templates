@@ -8,55 +8,53 @@ For creating a new srv definition, we use primitive data types. Consult http://w
 We only need `CMakeLists.txt` and `package.xml`
 
 4. (skip if already done for msg) Add in `package.xml`:
-`<build_depend>message_generation</build_depend>`
+```
+<build_depend>message_generation</build_depend>
 
-`<exec_depend>message_runtime</exec_depend>`
+<exec_depend>message_runtime</exec_depend>
+```
 
 5. (skip if already done for msg) Add in `CMakeLists.txt`:
+```
+find_package(
+...
+message_generation
+)
+```
 
-`find_package(`
+```
+generate_messages(
+...
+std_msgs
+)
+```
 
-`...`
-
-`message_generation`
-
-`)`
-
-
-`generate_messages(`
-
-`...`
-
-`std_msgs`
-
-`)`
-
-
-`catkin_package(`
-
-`...`
-
-`CATKIN_DEPENDS roscpp rospy std_msgs message_runtime`
-
-`)`
+```
+catkin_package(
+...
+CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+)
+```
 
 6. Make a folder for srv definitions `$ mkdir srv`, containing a file, for example `$ touch ComputeDiskArea.srv`:
 
-`float64 radius`
+`
+```
+float64 radius
 
-`---`
+---
 
-`float64 area`
+float64 area
+```
 
 
 7. Add this new file into the `CMakeLists.txt`:
 
-`add_service_files(`
-
-`  FILES`
-
-`  ComputeDiskArea.srv`
-
-`)`
+```
+add_service_files(
+  FILES
+  ComputeDiskArea.srv
+)
+```
 
 8. Compile everything with `$ catkin_make`

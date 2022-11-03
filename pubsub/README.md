@@ -8,55 +8,57 @@ For creating a new msg definition, we use primitive data types. Consult http://w
 We only need `CMakeLists.txt` and `package.xml`
 
 4. Add in `package.xml`:
-`<build_depend>message_generation</build_depend>`
 
-`<exec_depend>message_runtime</exec_depend>`
+```
+<build_depend>message_generation</build_depend>
+...
+<exec_depend>message_runtime</exec_depend>
+```
 
 5. Add in `CMakeLists.txt`:
 
-`find_package(`
-
-`...`
-
-`message_generation`
-
-`)`
-
-
-`generate_messages(`
-
-`...`
-
-`std_msgs`
-
-`)`
+```
+find_package(
+...
+message_generation
+)
+```
 
 
-`catkin_package(`
+```
+generate_messages(
+...
+std_msgs
+)
+```
 
-`...`
 
-`CATKIN_DEPENDS roscpp rospy std_msgs message_runtime`
-
-`)`
+```
+catkin_package(
+...
+CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+)
+```
 
 6. Make a folder for msg definitions `$ mkdir msg`, containing a file, for example `$ touch HardwareStatus.msg`:
 
-`int64 temperature`
+```
+int64 temperature
 
-`bool are_motors_up`
+bool are_motors_up
 
-`string message`
+string message
+```
 
 
 7. Add this new file into the `CMakeLists.txt`:
 
-`add_message_files)`
+```
+add_message_files)
+  FILES
 
-`  FILES`
-
-`  HardwareStatus.msg`
-
-`)`
+  HardwareStatus.msg
+)
+```
 
 8. Compile everything with `$ catkin_make`

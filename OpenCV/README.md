@@ -16,3 +16,6 @@ Use `pip3` if using Python3
 ## Additional packages
 1. Install ROS USB cam package, in a new terminal type `$ sudo apt-get ros-kinetic-usb-cam`.
 2. And ROS Image View, with `$ sudo apt-get install ros-kinetic-image-view`.
+
+# Bridging Images between OpenCV and ROS
+Treat Image as a message travelling through a topic. However the image format supported by ROS is different and NOT coompatible with the image format used by OpenCV. CvBridge enables the conversion between formats.

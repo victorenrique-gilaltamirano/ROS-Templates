@@ -19,3 +19,10 @@ Use `pip3` if using Python3
 
 # Bridging Images between OpenCV and ROS
 Treat Image as a message travelling through a topic. However the image format supported by ROS is different and NOT coompatible with the image format used by OpenCV. CvBridge enables the conversion between formats.
+
+# Read webcam as image message for ROS
+In a new terminal type `$ rosrun usb_cam usb_cam_node _pixel_format:=yuyv`.
+
+Verify in a new terminal `rostopic list`, and the `usb_cam/image_raw` topic should appear listed, which is the topic containing the webcam image as ROS message format.
+
+Additionally, in a new terminal view the image by `$ rosrun image_view image_view image:=/usb_cam/image_raw`.

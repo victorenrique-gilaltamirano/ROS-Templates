@@ -58,3 +58,15 @@ add_service_files(
 ```
 
 8. Compile everything with `$ catkin_make`
+
+# Steps to create a new _Client/Server_ ROS App
+
+Step 1. Define service message definition.
+
+Step 2. Create ROS Server Node.
+
+Step 3. Create ROS Client Node.
+
+Step 4. Execute Service.
+
+Step 5. Consume the Service by the Client.

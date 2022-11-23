@@ -62,3 +62,15 @@ add_message_files)
 ```
 
 8. Compile everything with `$ catkin_make`
+
+# Common Practices to write _Publisher_ in ROS
+
+Step 1. Determine a name for the topic to publish.
+
+Step 2. Determine the type of the messages that the topic will publish.
+
+Step 3. Determine the frequency of topic publication (how many messages per second).
+
+Step 4. Create a Publisher object with parameters chosen.
+
+Step 5. Keep publishing the topic message at the selected frequency.

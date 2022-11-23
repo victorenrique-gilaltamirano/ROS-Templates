@@ -85,4 +85,4 @@ Step 3. Define a _callback_ function that will automatically execute when a new 
 
 Step 4. Start listening for the topic messages.
 
-Step 5. Spin to listen forever (in C++).
+Step 5. Spin to listen forever (in C++ and Python).

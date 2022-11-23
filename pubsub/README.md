@@ -74,3 +74,15 @@ Step 3. Determine the frequency of topic publication (how many messages per seco
 Step 4. Create a Publisher object with parameters chosen.
 
 Step 5. Keep publishing the topic message at the selected frequency.
+
+# Common Practices to write _Subscriber_ in ROS
+
+Step 1. Identify the name for the topic to listen to.
+
+Step 2. Identify the type of the message to be received.
+
+Step 3. Define a _callback_ function that will automatically execute when a new message is received on the topic.
+
+Step 4. Start listening for the topic messages.
+
+Step 5. Spin to listen forever (in C++).

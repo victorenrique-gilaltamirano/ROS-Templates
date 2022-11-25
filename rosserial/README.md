@@ -46,7 +46,28 @@ Now examples for ROS should appear in the examples section.
 
 Check for Templates of ROS Nodes written in Arduino in the following repository [link](https://github.com/victorenrique-gilaltamirano/ROS-Templates/tree/main/rosserial/arduino).
 
-Application logic should be inside the `void loop()` method
+Application logic should be inside the `void loop()` method.
+
+Step 4. Write code to Arduino board and download the code into the board.
+
+Step 5. In order to establish communication between the Arduino board and ROS ecosystem, we need to run the server application by:
+In a new terminal:
+```
+$ roscore
+```
+In another terminal: (specify COM port, example ACM0)
+```
+$ rosrun rosserial_python serial_node.py/dev/ttyACM0
+```
+Verify in another terminal: Topic of hardware node should appear listed.
+```
+$ rostopic list
+```
+And if `serial_node` is active:
+```
+$ rosnode list
+```
+
 
 # Using Mbed board with ROS
 

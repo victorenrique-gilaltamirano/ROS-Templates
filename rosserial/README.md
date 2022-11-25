@@ -44,7 +44,7 @@ NOTE: If programming Arduino in Windows, open Arduino IDE - Manage Libraries - s
 
 Now examples for ROS should appear in the examples section.
 
-Check for Templates of ROS Nodes written in Arduino in the following repository [link](somwhere).
+Check for Templates of ROS Nodes written in Arduino in the following repository [link](https://github.com/victorenrique-gilaltamirano/ROS-Templates/tree/main/rosserial/arduino).
 
 
 # Using Mbed board with ROS

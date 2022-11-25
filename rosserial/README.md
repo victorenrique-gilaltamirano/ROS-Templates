@@ -49,4 +49,17 @@ Check for Templates of ROS Nodes written in Arduino in the following repository 
 
 # Using Mbed board with ROS
 
+For the ONLINE Compiler, simply import the rosserial_mbed library to your online compiler account using the following link:
+```
+$ https://developer.mbed.org/users/garyservin/code/ros_lib_noetic/
+```
 
+NOTE:
+In order to use the rosserial libraries in your own code, you must first put
+```
+#include <ros.h>
+```
+prior to including any other header files, e.g.
+```
+#include <std_msgs/String.h>
+```

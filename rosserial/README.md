@@ -46,6 +46,7 @@ Now examples for ROS should appear in the examples section.
 
 Check for Templates of ROS Nodes written in Arduino in the following repository [link](https://github.com/victorenrique-gilaltamirano/ROS-Templates/tree/main/rosserial/arduino).
 
+Application logic should be inside the `void loop()` method
 
 # Using Mbed board with ROS
 

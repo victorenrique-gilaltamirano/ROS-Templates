@@ -5,7 +5,7 @@
 # 
 # ~~~~~~~~~~~~~
 # std_msgs/Int64.msg is defined as:
-# int64
+# int64 data
 ################
 */
 

@@ -1,3 +1,17 @@
+/*
+##############
+# Node name: "led_panel"
+# 
+# Service Server in the "/set_led" topic with the service SetLed.srv definition
+# ~~~~~~~~~~~~~
+# my_robot_msgs/SetLed.srv is defined as:
+# int64 led_number
+# int64 state
+# ---
+# bool success
+################
+*/
+
 #include <ros/ros.h>
 
 #include <my_robot_msgs/SetLed.h>

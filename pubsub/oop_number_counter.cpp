@@ -1,3 +1,23 @@
+/*
+##############
+# Node name: "number_counter"
+# Subscribed to "/number" topic, carrying the message type Int64.msg
+# Publishing to "/number_count" topic the message type Int64.msg
+# 
+# Service Server of "/reset_counter" topic carrying the service type SetBool.srv
+#
+# ~~~~~~~~~~~~~
+# std_msgs/Int64.msg is defined as:
+# int64 data
+# ~~~~~~~~~~~~~
+# sts_srvs/SetBool.srv is defined as:
+# bool data
+# ---
+# bool success
+# string message
+################
+*/
+
 #include <ros/ros.h>
 #include <std_msgs/Int64.h>
 #include <std_srvs/SetBool.h>

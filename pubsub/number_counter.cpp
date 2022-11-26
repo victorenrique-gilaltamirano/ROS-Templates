@@ -1,3 +1,13 @@
+/*
+Node name: "number_counter"
+Subscribed to "/number" topic, carrying the message type Int64.msg
+Publishing to "/number_count" topic the message type Int64.msg
+
+~~~~~~~~~~~~~
+std_msgs/Int64.msg is defined as:
+int64 data
+*/
+
 #include <ros/ros.h>
 #include <std_msgs/Int64.h>
 

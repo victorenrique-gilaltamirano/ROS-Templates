@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Node name: my_first_python_node
+# Description: Displays in terminal the message "Hello" 10 times per second
+
+
 import rospy
 
 if __name__ == '__main__':

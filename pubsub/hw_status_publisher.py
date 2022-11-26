@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+################
 # Node name: "hardware_status_publisher"
 #
 # Publishing to "/my_robot/hardware_status" topic the message type HardwareStatus.msg

@@ -1,3 +1,17 @@
+/*
+##############
+# Node name: "hardware_status_publisher"
+#
+# Publishing to "/my_robot/hardware_status" topic the message type HardwareStatus.msg
+# 
+# ~~~~~~~~~~~~~
+# my_robot_msgs/HardwareStatus.msg is defined as:
+# int64 temerature
+# bool are_motors_up
+# string debug_message
+################
+*/
+
 #include <ros/ros.h>
 
 #include <my_robot_msgs/HardwareStatus.h>

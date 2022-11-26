@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ##############
-# Node name: "robot_news_radio_transmitter"
+# Node name: "smartphone"
 # 
 # Subscribed to "/robot_news_radio" topic carrying the message type String.msg
 # 

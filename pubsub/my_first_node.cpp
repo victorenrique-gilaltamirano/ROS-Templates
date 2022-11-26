@@ -1,3 +1,8 @@
+/*
+Node name: "my_first_cpp_node"
+Description: displays in terminal the message "Hello" 10 times per second.
+*/
+
 #include <ros/ros.h>
 
 int main (int argc, char **argv)

@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
 
+##############
+# Node name: "add_two_ints_client"
+# 
+# Service Client in the "/add_two_ints" topic with the service AddTwoInts.srv definition
+# ~~~~~~~~~~~~~
+# rospy_tutorials/AddTwoInts.srv is defined as:
+# int64 a
+# int64 b
+# ---
+# int64 c
+################
+
+
 import rospy
 from rospy_tutorials.srv import AddTwoInts
 

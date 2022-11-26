@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
 
+##############
+# Node name: "number_counter"
+# Subscribed to "/number" topic, carrying the message type Int64.msg
+# Publishing to "/number_count" topic the message type Int64.msg
+# 
+# ~~~~~~~~~~~~~
+# std_msgs/Int64.msg is defined as:
+# int64
+################
+
 import rospy
 from std_msgs.msg import Int64
 

@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 
+# Node name: "hardware_status_publisher"
+#
+# Publishing to "/my_robot/hardware_status" topic the message type HardwareStatus.msg
+# 
+# ~~~~~~~~~~~~~
+# my_robot_msgs/HardwareStatus.msg is defined as:
+# int64 temerature
+# bool are_motors_up
+# string debug_message
+################
+
 import rospy
 from my_robot_msgs.msg import HardwareStatus
 

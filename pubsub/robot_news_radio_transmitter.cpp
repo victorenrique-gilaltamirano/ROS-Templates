@@ -1,3 +1,15 @@
+/*
+##############
+# Node name: "robot_news_radio_transmitter"
+# 
+# Publishing to "/robot_news_radio" topic the message type String.msg
+# 
+# ~~~~~~~~~~~~~
+# std_msgs/String.msg is defined as:
+# string data
+################
+*/
+
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 

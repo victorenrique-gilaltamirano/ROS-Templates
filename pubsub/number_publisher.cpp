@@ -1,3 +1,14 @@
+/*
+##############
+# Node name: "number_publisher"
+# Publishing to "/number" topic the message type Int64.msg
+# 
+# ~~~~~~~~~~~~~
+# std_msgs/Int64.msg is defined as:
+# int64
+################
+*/
+
 #include <ros/ros.h>
 #include <std_msgs/Int64.h>
 

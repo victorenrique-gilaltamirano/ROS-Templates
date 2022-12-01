@@ -63,7 +63,7 @@ Verify in another terminal: Topic of hardware node should appear listed.
 ```
 $ rostopic list
 ```
-And if `serial_node` is active:
+And verify if `serial_node` is active:
 ```
 $ rosnode list
 ```
@@ -71,7 +71,7 @@ $ rosnode list
 
 # Using Mbed board with ROS
 
-For the ONLINE Compiler, simply import the rosserial_mbed library to your online compiler account using the following link:
+Step 1. For the ONLINE Compiler, simply import the rosserial_mbed library to your online compiler account using the following link:
 ```
 $ https://developer.mbed.org/users/garyservin/code/ros_lib_noetic/
 ```
@@ -84,4 +84,23 @@ In order to use the rosserial libraries in your own code, you must first put
 prior to including any other header files, e.g.
 ```
 #include <std_msgs/String.h>
+```
+Step 2. Write code to Mbed board and download the code into the board.
+
+Step 3. In order to establish communication between the Mbed board and ROS ecosystem, we need to run the server application by:
+In a new terminal:
+```
+$ roscore
+```
+In another terminal: (specify COM port, example ACM0)
+```
+$ rosrun rosserial_python serial_node.py/dev/ttyACM0
+```
+Verify in another terminal: Topic of hardware node should appear listed.
+```
+$ rostopic list
+```
+And verify if `serial_node` is active:
+```
+$ rosnode list
 ```

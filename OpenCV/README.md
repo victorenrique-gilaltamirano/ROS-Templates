@@ -26,3 +26,15 @@ In a new terminal type `$ rosrun usb_cam usb_cam_node _pixel_format:=yuyv`.
 Verify in a new terminal `rostopic list`, and the `usb_cam/image_raw` topic should appear listed, which is the topic containing the webcam image as ROS message format.
 
 Additionally, in a new terminal view the image by `$ rosrun image_view image_view image:=/usb_cam/image_raw`.
+
+
+# Using Android Camera for OpenCV
+Step 1. Install package `pip install urllib` or `pip install urlib3`
+
+Step 2. Download and Install _IP Webcam_ App into Android phone.
+
+Step 3. Open App and Select `Start Server`.
+
+Step 4. Note the Ip Address:Port URL
+
+Step 5. Use `ROS-Templates/OpenCV/IPwebcamToOpenCV.py` as starting point for further processing.  

@@ -31,6 +31,33 @@ Android device will publish via TCP/IP the sensor reading of android phone to a 
 - Link: https://github.com/kprimice/react-native-sensor-manager
 - Camera and Audio: base64 encoded strings
 
+## Covnert JSON string into Python Dictionary
+Data from phone is a strring of the form:
+
+`{"SensorName":"Accelerometer","Timestamp":1683713060748,"x":"-0.4546051025390625","y":"3.2190704345703125","z":"9.168655395507812","payload":""}`
+
+In order to transform this string into an usable dictionary object for python, the following example is given:
+
+```
+# Python3 code to demonstrate
+# convert dictionary string to dictionary
+# using json.loads()
+import json
+ 
+# initializing string
+test_string = '{"Nikhil" : 1, "Akshat" : 2, "Akash" : 3}'
+ 
+# printing original string
+print("The original string : " + str(test_string))
+ 
+# using json.loads()
+# convert dictionary string to dictionary
+res = json.loads(test_string)
+ 
+# print result
+print("The converted dictionary : " + str(res))
+```
+
 # References
 
 `https://github.com/priyankark/SensorStreamServer`

@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+################################
+# DO NOT OPEN IN JUPYTER NOTEBOOK OR ANACONDA
+# RECOMMENDED TO OPEN IN VISUAL STUDIO CODE
+#############################
+
 import asyncio
 import websockets
 import socket
@@ -12,7 +17,7 @@ def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         # doesn't even have to be reachable
-        s.connect(('10.255.255.255', 1))
+        s.connect(('10.255.255.255', 1))             ########### CHANGE IP HERE for computer IP
         IP = s.getsockname()[0]
     except Exception:
         IP = '127.0.0.1'
@@ -120,7 +125,7 @@ async def echo(websocket, path):
 
 # Contribution by Evan Johnston
 async def main():
-    async with websockets.serve(echo, '0.0.0.0', 5000, max_size=1_000_000_000):
+    async with websockets.serve(echo, '0.0.0.0', 5000, max_size=1_000_000_000):                 ########### CHANGE IP HERE for computer IP
         await asyncio.Future()
     
 

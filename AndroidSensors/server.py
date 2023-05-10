@@ -17,7 +17,7 @@ def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         # doesn't even have to be reachable
-        s.connect(('10.255.255.255', 1))             ########### CHANGE IP HERE for computer IP
+        s.connect(('1.1.2.1', 1))  ##################### CHANGE IP FOR COMPUTER IP
         IP = s.getsockname()[0]
     except Exception:
         IP = '127.0.0.1'
@@ -38,9 +38,17 @@ async def echo(websocket, path):
     async for message in websocket:
         if path == '/accelerometer':
             data = await websocket.recv()
-            print(data)
-            f = open("accelerometer.txt", "a")
-            f.write(data+"\n")
+            print(data) ## data si a string containing JSON data
+            
+            res = json.loads(data) ## transforms json data into dictionary
+            print(res['x']) ## accessing dictionary element, ## res['x'] is still a string
+            print(type(res['x']))
+            x_data = float(res['x']) ## converting from string to float
+            print(x_data)
+            print(type(x_data))  
+
+            #f = open("accelerometer.txt", "a")
+            #f.write(data+"\n")
 
         if path == '/gyroscope':
             data = await websocket.recv()
@@ -125,7 +133,7 @@ async def echo(websocket, path):
 
 # Contribution by Evan Johnston
 async def main():
-    async with websockets.serve(echo, '0.0.0.0', 5000, max_size=1_000_000_000):                 ########### CHANGE IP HERE for computer IP
+    async with websockets.serve(echo, '1.1.2.1', 5000, max_size=1_000_000_000):    ############## CHANGE IP FOR COMPUTER IP
         await asyncio.Future()
     
 

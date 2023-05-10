@@ -9,7 +9,7 @@ Android device will publish via TCP/IP the sensor reading of android phone to a 
 - `pip install asyncio`
 - `pip install Wave`
 - `pip install websockets`
-3. Sample code is provided in `server.py`
+3. Sample code is provided in `server.py`. Do NOT run in Jupyter Notebook or Lab, recommended to run in Visual Studio Code.
 
 ## To use the APP
 

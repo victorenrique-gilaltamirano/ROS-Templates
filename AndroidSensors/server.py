@@ -133,7 +133,7 @@ async def echo(websocket, path):
 
 # Contribution by Evan Johnston
 async def main():
-    async with websockets.serve(echo, '1.1.2.1', 5000, max_size=1_000_000_000):    ############## CHANGE IP FOR COMPUTER IP
+    async with websockets.serve(echo, '0.0.0.0', 5000, max_size=1_000_000_000):    ############## CHANGE IP FOR COMPUTER IP
         await asyncio.Future()
     
 
